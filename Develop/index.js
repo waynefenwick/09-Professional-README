@@ -24,7 +24,7 @@ const information = [
      {
           type: 'checkbox',
           name: 'license',
-          message: 'Please choose a license:',
+          message: 'Please select a license:',
           choices: ['mit', 'apache-2.0', 'agpl-3.0', 'mpl-2.0', 'bsl-1.0'],
           validate: nameInput => {
                if (nameInput) {
@@ -39,12 +39,12 @@ const information = [
      {
           type: 'input',
           name: 'description',
-          message: 'How would you describe your repository?',
+          message: 'How would you describe your project?',
           validate: nameInput => {
                if (nameInput) {
                     return true;
                } else {
-                    console.log('Please describe your repository.');
+                    console.log('Please describe your project.');
                     return false;
                }
           }
@@ -53,13 +53,13 @@ const information = [
      {
           type: 'confirm',
           name: 'confirmInstallation',
-          message: 'Are there instruction steps to installation?',
+          message: 'Are there instruction steps for installation?',
      },
 
      {
           type: 'input',
           name: 'installation',
-          message: 'What are the steps involved in installation?',
+          message: 'What are the steps to installation ?',
           when: ({ confirmInstallation }) => {
                if (confirmInstallation) {
                     return true;
@@ -72,13 +72,13 @@ const information = [
      {
           type: 'confirm',
           name: 'confirmUsage',
-          message: 'Are there instructions on how to use your application',
+          message: 'Are there instructions on how to use your application?',
      },
 
      {
           type: 'input',
           name: 'usage',
-          message: 'List steps on how your application is used (You will be able to include visual images and videos)',
+          message: 'List steps on how your application is used.',
           when: ({ confirmUsage }) => {
                if (confirmUsage) {
                     return true;
@@ -86,6 +86,20 @@ const information = [
                     return false;
                }
           }
+     },
+
+     {
+          type: 'confirm',
+          name: 'confirmVideo',
+          message: 'Do you have a picture or instructional video to include?',
+     },
+
+     {
+          type: 'input',
+          name: 'videourl',
+          message: 'Insert a link to your video or picture',
+          when: ({ confirmVideo }) => confirmVideo,
+          default: './grahics/screenshot.png',
      },
 
      {
@@ -109,8 +123,8 @@ const information = [
 
      {
           type: 'confirm',
-          name: 'ConfirmContribution',
-          message: 'May devlopers make improvement constributions to your project?',
+          name: 'confirmContribution',
+          message: 'May developers make improvement contributions to your project?',
      },
 
      {
@@ -182,19 +196,3 @@ async function init() {
 
 // Function call to initialize app
 init();
-
-// GIVEN a command - line application that accepts user input
-// WHEN I am prompted for information about my application repository
-// THEN a high - quality, professional README.md is generated with the title of my project and sections entitled Description, Table of Contents, Installation, Usage, License, Contributing, Tests, and Questions
-// WHEN I enter my project title
-// THEN this is displayed as the title of the README
-// WHEN I enter a description, installation instructions, usage information, contribution guidelines, and test instructions
-// THEN this information is added to the sections of the README entitled Description, Installation, Usage, Contributing, and Tests
-// WHEN I choose a license for my application from a list of options
-// THEN a badge for that license is added near the top of the README and a notice is added to the section of the README entitled License that explains which license the application is covered under
-// WHEN I enter my GitHub username
-// THEN this is added to the section of the README entitled Questions, with a link to my GitHub profile
-// WHEN I enter my email address
-// THEN this is added to the section of the README entitled Questions, with instructions on how to reach me with additional questions
-// WHEN I click on the links in the Table of Contents
-// THEN I am taken to the corresponding section of the README

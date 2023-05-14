@@ -4,8 +4,8 @@ function renderLicenseBadge(license) {
   const licenseBadgeOptions = ['mit', 'apache-2.0', 'agpl-3.0', 'mpl-2.0', 'bsl-1.0'];
   let badgeUrl = '';
   for (let i = 0; i < licenseBadgeOptions.length; i++) {
-    if (license === licenseBadgeOptions[i]) {
-      badgeUrl = `https://img.shields.io/aur/-${licenseBadgeOptions[i]}-/bo?color=Green&style=plastic`;
+    if (license.includes(licenseBadgeOptions[i])) {
+      badgeUrl = `https://img.shields.io/badge/license-${licenseBadgeOptions[i]}-green?style=plastic`;
       break;
     }
   }
@@ -18,7 +18,7 @@ function renderLicenseLink(license) {
   const licenseLinkOptions = ['mit', 'apache-2.0', 'agpl-3.0', 'mpl-2.0', 'bsl-1.0'];
   let linkUrl = '';
   for (let i = 0; i < licenseLinkOptions.length; i++) {
-    if (license === licenseLinkOptions[i]) {
+    if (license.includes(licenseLinkOptions[i])) {
       linkUrl = `https://choosealicense.com/licenses/${licenseLinkOptions[i]}/`;
       break;
     }
@@ -39,20 +39,18 @@ function generateMarkdown(data) {
 
 # ${data.title}
 
-![badge](https://img.shields.io/badge/license-${licenseBadge}-green.svg?style=plastic)
-<br/>
-
+![badge](${licenseBadge})
 
 
 ## Description
 ${data.description}
-<br/>
 
 
 ## Table of Contents
 
  * [Installation](#installation)
  * [Usage](#usage)
+ * [Video](#videourl)
  * [Testing](#testing)
  * [Contribution](#contribution)
  * [Contact](#username)
@@ -60,16 +58,25 @@ ${data.description}
 
 ## Installation
 ${data.installation}
+_How to Install:_
+
 
 
 
 ## Usage
 ${data.usage}
+_How to Use:_
+
+
+
+## Video
+![video](${data.videourl})
 
 
 
 ## Testing
 ${data.testing}
+
 
 
 ## Contributers
@@ -79,9 +86,7 @@ ${data.contribution}
 
 ## Questions
 
-_If you have any questions, or would like to contact me, please send
-me an email. I will be back in contact with you as soon as possible.
-Thanks for taking the time to visit this repository._
+_If you would like to contact me, please send me an email. I will be back in contact with you as soon as possible. Thanks for taking the time to visit this repository._
 
 
 ## My Contact Information
@@ -93,7 +98,7 @@ Email Address: ${data.email}
 
 ## License
 
-_You can view the details of this license at_ (https://choosealicense.com/licenses/${licenseLink})
+_You can view license details at_ ![Web](${licenseLink})
 
 `};
 
