@@ -39,7 +39,7 @@ const information = [
      {
           type: 'input',
           name: 'description',
-          message: 'How would you describe your project?',
+          message: 'What is the purpose of your project and how would you describe it?',
           validate: nameInput => {
                if (nameInput) {
                     return true;
@@ -53,52 +53,67 @@ const information = [
      {
           type: 'confirm',
           name: 'confirmInstallation',
-          message: 'Are there instruction steps for installation?',
+          message: 'Are there instructions on how to install the application?',
      },
 
      {
           type: 'input',
           name: 'installation',
-          message: 'What are the steps to installation?',
-          when: ({ confirmInstallation }) => {
-               if (confirmInstallation) {
+          message: 'What are the steps for installation?',
+          validate: nameInput => {
+               if (nameInput) {
                     return true;
                } else {
+                    console.log('Please describe the steps for installation.');
                     return false;
                }
-          }
+          },
+          when: ({ confirmInstallation }) => confirmInstallation,
      },
 
      {
           type: 'confirm',
           name: 'confirmUsage',
-          message: 'Are there instructions on how to use your application?',
+          message: 'Are there instructions on how to use the application?',
      },
 
      {
           type: 'input',
           name: 'usage',
-          message: 'List steps on how your application is used.',
-          when: ({ confirmUsage }) => {
-               if (confirmUsage) {
+          message: 'Describe how to use the application.',
+          validate: nameInput => {
+               if (nameInput) {
                     return true;
                } else {
+                    console.log('Please describe how to use the application.');
                     return false;
                }
-          }
+          },
+          when: ({ confirmUsage }) => confirmUsage,
      },
 
      {
           type: 'confirm',
-          name: 'confirmVideo',
-          message: 'Do you have a picture or instructional video to include?',
+          name: 'confirmMedia',
+          message: 'Do you have any media to include?',
      },
 
      {
           type: 'input',
-          name: 'videourl',
-          message: 'Insert your local .gif (eg., ./develop/graphics/name.gif',
-          when: ({ confirmVideo }) => confirmVideo,
+          name: 'media',
+          message: 'Insert your local media url (eg., ./develop/graphics/name.gif',
+          validate: (input) => {
+               if (input) {
+                    return true;
+               } else {
+                    console.log('Please enter at least one media url.');
+                    return false;
+               }
+          },
+          when: ({ confirmMedia }) => confirmMedia,
+          filter: (input) => {
+               return input.split(',').map((url) => url.trim());
+          },
      },
 
      {
@@ -111,38 +126,42 @@ const information = [
           type: 'input',
           name: 'testing',
           message: 'Explain how other developers can test your project.',
-          when: ({ confirmTesting }) => {
-               if (confirmTesting) {
+          validate: (input) => {
+               if (input) {
                     return true;
                } else {
+                    console.log('Please explain how other developers can test your project.');
                     return false;
                }
-          }
+          },
+          when: ({ confirmTesting }) => confirmTesting,
      },
 
      {
           type: 'confirm',
           name: 'confirmContribution',
-          message: 'Has there been or would you like any outside contribution to your project?',
+          message: 'Are there any contributers or would you like any outside contribution to your project?',
      },
 
      {
           type: 'input',
           name: 'contribution',
-          message: 'Explain contributions and/or how others can contribute toward your project.',
-          when: ({ confirmContribution }) => {
-               if (confirmContribution) {
+          message: 'Provide information (who & how) others have contributed to your project.',
+          validate: (input) => {
+               if (input) {
                     return true;
                } else {
+                    console.log('Please provide information (who & how) others have contributed to your project.');
                     return false;
                }
-          }
+          },
+          when: ({ confirmContribution }) => confirmContribution,
      },
 
      {
           type: 'input',
           name: 'username',
-          message: 'What is your GitHub username.',
+          message: 'What is your GitHub username?',
           validate: nameInput => {
                if (nameInput) {
                     return true;
@@ -156,7 +175,7 @@ const information = [
      {
           type: 'input',
           name: 'email',
-          message: 'What is your preferred email address.',
+          message: 'What is your preferred email address?',
           validate: nameInput => {
                if (nameInput) {
                     return true;

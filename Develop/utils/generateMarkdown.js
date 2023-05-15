@@ -55,23 +55,23 @@ function generateMarkdown(data) {
 To see more about license badges, visit [Shields IO](https://shields.io/category/license)
 
 &nbsp;
-_______________
+
 ## Description
 ${data.description}
 
 &nbsp;
-_______________
+
 ## Table of Contents
 
  * [Installation](#installation)
  * [Usage](#usage)
- * [Video](#video)
+ * [Media](#media)
  * [Testing](#testing)
  * [Contribution](#contribution)
  * [Question](#username)
 
 &nbsp;
-_______________
+
 ## Installation
 
 ${data.installation}
@@ -83,7 +83,9 @@ ${data.installation}
 &nbsp;
 
 [Back to Table of Contents](#table-of-contents)
-_______________
+
+
+
 ## Usage
 
 ${data.usage}
@@ -91,20 +93,24 @@ ${data.usage}
 &nbsp;
 
 [Back to Table of Contents](#table-of-contents)
-_______________
-## Video
+
+
+
+## Media
 _A brief overview of the project build_
 &nbsp;
 
-![video](${data.videourl})
+![media](${data.media})
 
 
-* Visit [Full Video](https://drive.google.com/file/d/11rmrzXOINSVQvJi2bLvetUP0_cHiLzjO/view) to see more details
+* Visit [Full Media](https://drive.google.com/file/d/11rmrzXOINSVQvJi2bLvetUP0_cHiLzjO/view) to see more details
 
 &nbsp;
 
 [Back to Table of Contents](#table-of-contents)
-_______________
+
+
+
 ## Testing
 
 ${data.testing}
@@ -112,7 +118,9 @@ ${data.testing}
 &nbsp;
 
 [Back to Table of Contents](#table-of-contents)
-_______________
+
+
+
 ## Contribution
 
 ${data.contribution}
@@ -123,7 +131,9 @@ ${data.contribution}
 &nbsp;
 
 [Back to Table of Contents](#table-of-contents)
-_______________
+
+
+
 ## Questions
 
 _If you have any questions, please feel free to contact me._
@@ -137,7 +147,6 @@ Email Address: <a href="mailto:${data.email}">${data.email}</a>
 _Thanks for taking time to visit this repository!_
 
 [Back to Top](#License)
-_______________
 
 `};
 module.exports = generateMarkdown;
