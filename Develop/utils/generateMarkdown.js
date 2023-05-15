@@ -9,7 +9,11 @@ function renderLicenseBadge(license) {
       break;
     }
   }
-  return badgeUrl;
+  if (badgeUrl === '') {
+    return ''
+  } else {
+    return badgeUrl
+  }
 };
 
 // TODO: Create a function that returns the web license 
@@ -23,11 +27,16 @@ function renderLicenseLink(license) {
       break;
     }
   }
-  return linkUrl;
+  if (linkUrl === '') {
+    return ''
+  } else {
+    return linkUrl
+  }
 };
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
+
 
 
 // TODO: Create a function to generate markdown for README
@@ -35,27 +44,24 @@ function generateMarkdown(data) {
   const licenseBadge = renderLicenseBadge(data.license);
   const licenseLink = renderLicenseLink(data.license);
   const githubLink = `https://github.com/${data.username}`;
-  const gmail = `https://mail.google.com/${data.email}`
 
   return `
 
 # ${data.title}
 
-
 ## License
+[![License Badge](${licenseBadge})](${licenseLink})&nbsp;
 
-[![License Badge](${licenseBadge})](${licenseLink})
-
-_Click the button for details_
-
+To see more about license badges, visit [Shields IO](https://shields.io/category/license)
 
 
-
+<ln>___________________________________________________________________<ln>
 ## Description
-
 ${data.description}
 
+&nbsp;
 
+<ln>___________________________________________________________________<ln>
 ## Table of Contents
 
  * [Installation](#installation)
@@ -63,50 +69,66 @@ ${data.description}
  * [Video](#video)
  * [Testing](#testing)
  * [Contribution](#contributers)
- * [Contact](#username)
+ * [Question](#username)
 
+&nbsp;
 
-
+<ln>___________________________________________________________________<ln>
 ## Installation
 
 ${data.installation}
 
+&nbsp;
 
-
+<ln>___________________________________________________________________<ln>
 ## Usage
 
 ${data.usage}
 
+&nbsp;
 
-
-## Video - _A brief overview of project build_
+<ln>___________________________________________________________________<ln>
+## Video
+_A brief overview of the project build_
+&nbsp;
 
 ![video](${data.videourl})
 
 
+* Visit [Full Video](https://drive.google.com/file/d/11rmrzXOINSVQvJi2bLvetUP0_cHiLzjO/view) to see more details
 
+&nbsp;
+
+<ln>___________________________________________________________________<ln>
 ## Testing
 
 ${data.testing}
 
+&nbsp;
 
-
-## Contributers
+<ln>___________________________________________________________________<ln>
+## Contribution
 
 ${data.contribution}
 
+* [Original Source code](https://github.com/coding-boot-camp/potential-enigma)
+* [Guideline to Professional README](https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide)
 
+&nbsp;
 
+<ln>___________________________________________________________________<ln>
 ## Questions
 
-_If you would like to contact me, please send an email. I will be back in contact with you as soon as possible. Thanks for taking the time to visit this repository._
-
-
-## My Contact Information
+_If you have any questions, please feel free to contact me._
 
 GitHub Username: [${data.username}](${githubLink})
 
-Email Address: [${data.email}](${gmail})
+Email Address: <a href="mailto:${data.email}">${data.email}</a>
+
+&nbsp;
+
+_Thanks for taking time to visit this repository!_
+________________________________________________________________________
 
 `};
 module.exports = generateMarkdown;

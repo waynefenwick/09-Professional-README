@@ -97,7 +97,7 @@ const information = [
      {
           type: 'input',
           name: 'videourl',
-          message: 'Insert your local .gif (for eg., ./develop/graphics/video.gif',
+          message: 'Insert your local .gif (eg., ./develop/graphics/name.gif',
           when: ({ confirmVideo }) => confirmVideo,
      },
 
@@ -123,13 +123,13 @@ const information = [
      {
           type: 'confirm',
           name: 'confirmContribution',
-          message: 'May developers make improvement contributions to your project?',
+          message: 'Has there been or would you like any outside contribution to your project?',
      },
 
      {
           type: 'input',
           name: 'contribution',
-          message: 'Explain how other developers have contributed or can make contributions to the project.',
+          message: 'Explain contributions and/or how others can contribute toward your project.',
           when: ({ confirmContribution }) => {
                if (confirmContribution) {
                     return true;
@@ -142,7 +142,7 @@ const information = [
      {
           type: 'input',
           name: 'username',
-          message: 'Please enter your GitHub username.',
+          message: 'What is your GitHub username.',
           validate: nameInput => {
                if (nameInput) {
                     return true;
@@ -156,7 +156,7 @@ const information = [
      {
           type: 'input',
           name: 'email',
-          message: 'Please enter your email address.',
+          message: 'What is your preferred email address.',
           validate: nameInput => {
                if (nameInput) {
                     return true;
