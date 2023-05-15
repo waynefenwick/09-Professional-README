@@ -34,15 +34,25 @@ function renderLicenseLink(license) {
 function generateMarkdown(data) {
   const licenseBadge = renderLicenseBadge(data.license);
   const licenseLink = renderLicenseLink(data.license);
+  const githubLink = `https://github.com/${data.username}`;
+  const gmail = `https://mail.google.com/${data.email}`
 
   return `
 
 # ${data.title}
 
-![badge](${licenseBadge})
+
+## License
+
+[![License Badge](${licenseBadge})](${licenseLink})
+
+_Click the button for details_
+
+
 
 
 ## Description
+
 ${data.description}
 
 
@@ -50,56 +60,53 @@ ${data.description}
 
  * [Installation](#installation)
  * [Usage](#usage)
- * [Video](#videourl)
+ * [Video](#video)
  * [Testing](#testing)
- * [Contribution](#contribution)
+ * [Contribution](#contributers)
  * [Contact](#username)
 
 
-## Installation
-${data.installation}
-_How to Install:_
 
+## Installation
+
+${data.installation}
 
 
 
 ## Usage
+
 ${data.usage}
-_How to Use:_
 
 
 
-## Video
+## Video - _A brief overview of project build_
+
 ![video](${data.videourl})
 
 
 
 ## Testing
+
 ${data.testing}
 
 
 
 ## Contributers
+
 ${data.contribution}
 
 
 
 ## Questions
 
-_If you would like to contact me, please send me an email. I will be back in contact with you as soon as possible. Thanks for taking the time to visit this repository._
+_If you would like to contact me, please send an email. I will be back in contact with you as soon as possible. Thanks for taking the time to visit this repository._
 
 
 ## My Contact Information
 
-GitHub Username: ${data.username}
+GitHub Username: [${data.username}](${githubLink})
 
-Email Address: ${data.email}
-
-
-## License
-
-_You can view license details at_ ![Web](${licenseLink})
+Email Address: [${data.email}](${gmail})
 
 `};
-
 module.exports = generateMarkdown;

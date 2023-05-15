@@ -1,5 +1,5 @@
 // TODO: Include packages needed for this application
-const generateMarkdown = require('./utils/generateMarkdown');
+const generateMarkdown = require('./develop/utils/generateMarkdown');
 const fs = require('fs');
 const inquirer = require('inquirer');
 const util = require('util');
@@ -59,7 +59,7 @@ const information = [
      {
           type: 'input',
           name: 'installation',
-          message: 'What are the steps to installation ?',
+          message: 'What are the steps to installation?',
           when: ({ confirmInstallation }) => {
                if (confirmInstallation) {
                     return true;
@@ -97,9 +97,8 @@ const information = [
      {
           type: 'input',
           name: 'videourl',
-          message: 'Insert a link to your video or picture',
+          message: 'Insert your local .gif (for eg., ./develop/graphics/video.gif',
           when: ({ confirmVideo }) => confirmVideo,
-          default: './grahics/screenshot.png',
      },
 
      {
