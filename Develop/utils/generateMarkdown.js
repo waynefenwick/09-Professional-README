@@ -54,40 +54,44 @@ function generateMarkdown(data) {
 
 To see more about license badges, visit [Shields IO](https://shields.io/category/license)
 
-
-<ln>___________________________________________________________________<ln>
+&nbsp;
+_______________
 ## Description
 ${data.description}
 
 &nbsp;
-
-<ln>___________________________________________________________________<ln>
+_______________
 ## Table of Contents
 
  * [Installation](#installation)
  * [Usage](#usage)
  * [Video](#video)
  * [Testing](#testing)
- * [Contribution](#contributers)
+ * [Contribution](#contribution)
  * [Question](#username)
 
 &nbsp;
-
-<ln>___________________________________________________________________<ln>
+_______________
 ## Installation
 
 ${data.installation}
 
+[Node.js Installation](https://nodejs.org/en)
+
+[NPM Installation](https://docs.npmjs.com/cli/v8/commands/npm-install)
+
 &nbsp;
 
-<ln>___________________________________________________________________<ln>
+[Back to Table of Contents](#table-of-contents)
+_______________
 ## Usage
 
 ${data.usage}
 
 &nbsp;
 
-<ln>___________________________________________________________________<ln>
+[Back to Table of Contents](#table-of-contents)
+_______________
 ## Video
 _A brief overview of the project build_
 &nbsp;
@@ -99,14 +103,16 @@ _A brief overview of the project build_
 
 &nbsp;
 
-<ln>___________________________________________________________________<ln>
+[Back to Table of Contents](#table-of-contents)
+_______________
 ## Testing
 
 ${data.testing}
 
 &nbsp;
 
-<ln>___________________________________________________________________<ln>
+[Back to Table of Contents](#table-of-contents)
+_______________
 ## Contribution
 
 ${data.contribution}
@@ -116,7 +122,8 @@ ${data.contribution}
 
 &nbsp;
 
-<ln>___________________________________________________________________<ln>
+[Back to Table of Contents](#table-of-contents)
+_______________
 ## Questions
 
 _If you have any questions, please feel free to contact me._
@@ -128,7 +135,9 @@ Email Address: <a href="mailto:${data.email}">${data.email}</a>
 &nbsp;
 
 _Thanks for taking time to visit this repository!_
-________________________________________________________________________
+
+[Back to Top](#License)
+_______________
 
 `};
 module.exports = generateMarkdown;
