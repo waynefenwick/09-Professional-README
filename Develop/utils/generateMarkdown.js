@@ -53,7 +53,8 @@ function generateMarkdown(data) {
 ## License
 [![License Badge](${licenseBadge})](${licenseLink})&nbsp;
 
-To see more about license badges, visit [Shields IO](https://shields.io/category/license)
+* Select the badge to see details.
+* To see more about license badges, visit [Shields IO](https://shields.io/category/license)
 
 &nbsp;
 

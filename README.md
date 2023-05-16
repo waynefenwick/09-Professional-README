@@ -3,9 +3,10 @@
 # A Professional README.md Template
 
 ## License
-[![License Badge](https://img.shields.io/badge/license-mit-green?style=plastic)](https://choosealicense.com/licenses/mit/)&nbsp;
+[![License Badge](https://img.shields.io/badge/license-mpl2.0-green?style=plastic)](https://choosealicense.com/licenses/mpl-2.0/)&nbsp;
 
-To see more about license badges, visit [Shields IO](https://shields.io/category/license)
+* Select the badge to see details.
+* To see more about license badges, visit [Shields IO](https://shields.io/category/license)
 
 &nbsp;
 
