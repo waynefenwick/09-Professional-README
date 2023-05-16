@@ -55,9 +55,9 @@ _A brief overview of the project build_
 
 ## Media
 
-![Media](./graphics/testing.gif)
+![Media](./graphics/videosnippet.gif)
 
-* Visit [Full Media](https://drive.google.com/file/d/11rmrzXOINSVQvJi2bLvetUP0_cHiLzjO/view) to see more details
+* Visit [Full Media](https://drive.google.com/file/d/1RP5O_m4o5pA8fouVVtnfsFCCwfmUrG7Y/view) to see more details
 
 &nbsp;
 

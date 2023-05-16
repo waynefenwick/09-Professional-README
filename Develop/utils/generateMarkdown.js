@@ -4,9 +4,11 @@ function renderLicenseBadge(license) {
   const licenseBadgeOptions = ['mit', 'apache-2.0', 'agpl-3.0', 'mpl-2.0', 'bsl-1.0'];
   let badgeUrl = '';
   for (let i = 0; i < licenseBadgeOptions.length; i++) {
+    const formattedLicense = licenseBadgeOptions[i].replace(/-/g, '');
     if (license.includes(licenseBadgeOptions[i])) {
-      badgeUrl = `https://img.shields.io/badge/license-${licenseBadgeOptions[i]}-green?style=plastic`;
+      badgeUrl = `https://img.shields.io/badge/license-${formattedLicense}-green?style=plastic`;
       break;
+
     }
   }
   if (badgeUrl === '') {
@@ -16,7 +18,11 @@ function renderLicenseBadge(license) {
   }
 };
 
+`https://img.shields.io/badge/license-apache2.0-green?style=plastic`
+
 // TODO: Create a function that returns the web license 
+// If there is no license, return an empty string
+// TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
   const licenseLinkOptions = ['mit', 'apache-2.0', 'agpl-3.0', 'mpl-2.0', 'bsl-1.0'];
@@ -33,11 +39,6 @@ function renderLicenseLink(license) {
     return linkUrl
   }
 };
-
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
-
-
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
@@ -102,7 +103,7 @@ _A brief overview of the project build_
 
 ${data.media ? `## Media\n\n![Media](${data.media})` : ' '}
 
-* Visit [Full Media](https://drive.google.com/file/d/11rmrzXOINSVQvJi2bLvetUP0_cHiLzjO/view) to see more details
+* Visit [Full Media](https://drive.google.com/file/d/1RP5O_m4o5pA8fouVVtnfsFCCwfmUrG7Y/view) to see more details
 
 &nbsp;
 
