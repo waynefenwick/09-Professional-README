@@ -10,7 +10,7 @@ To see more about license badges, visit [Shields IO](https://shields.io/category
 &nbsp;
 
 ## Description
-As a developer I want an efficient README generator where I can quickly create a professional README file for a new project. The generator is node.js based. It enables me to very quickly produce a top quality README file that I can add to any of my projects.
+As a developer I wanted an efficient README generator where I could quickly create a professional README file for a new project. The generator is node.js based. It enables me to very quickly produce a top quality README file that I can add to any of my projects.
 
 &nbsp;
 
@@ -55,7 +55,7 @@ _A brief overview of the project build_
 
 ## Media
 
-![Media](./graphics/screenshot.png)
+![Media](./graphics/testing.gif)
 
 * Visit [Full Media](https://drive.google.com/file/d/11rmrzXOINSVQvJi2bLvetUP0_cHiLzjO/view) to see more details
 
