@@ -74,7 +74,7 @@ ${data.description}
 
 ## Installation
 
-${data.installation}
+${data.installation || ''}
 
 [Node.js Installation](https://nodejs.org/en)
 
@@ -82,17 +82,17 @@ ${data.installation}
 
 &nbsp;
 
-[Back to Table of Contents](#table-of-contents)
+[Table of Contents](#table-of-contents)
 
 
 
 ## Usage
 
-${data.usage}
+${data.usage || ''}
 
 &nbsp;
 
-[Back to Table of Contents](#table-of-contents)
+[Table of Contents](#table-of-contents)
 
 
 
@@ -100,37 +100,36 @@ ${data.usage}
 _A brief overview of the project build_
 &nbsp;
 
-![media](${data.media})
-
+${data.media ? `## Media\n\n![Media](${data.media})` : ' '}
 
 * Visit [Full Media](https://drive.google.com/file/d/11rmrzXOINSVQvJi2bLvetUP0_cHiLzjO/view) to see more details
 
 &nbsp;
 
-[Back to Table of Contents](#table-of-contents)
+[Table of Contents](#table-of-contents)
 
 
 
 ## Testing
 
-${data.testing}
+${data.testing || ''}
 
 &nbsp;
 
-[Back to Table of Contents](#table-of-contents)
+[Table of Contents](#table-of-contents)
 
 
 
 ## Contribution
 
-${data.contribution}
+${data.contribution || ''}
 
 * [Original Source code](https://github.com/coding-boot-camp/potential-enigma)
 * [Guideline to Professional README](https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide)
 
 &nbsp;
 
-[Back to Table of Contents](#table-of-contents)
+[Table of Contents](#table-of-contents)
 
 
 
@@ -146,7 +145,7 @@ Email Address: <a href="mailto:${data.email}">${data.email}</a>
 
 _Thanks for taking time to visit this repository!_
 
-[Back to Top](#License)
+[Back to Top](#)
 
 `};
 module.exports = generateMarkdown;

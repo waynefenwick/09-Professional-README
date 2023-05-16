@@ -6,19 +6,10 @@ const util = require('util');
 
 // TODO: Create an array of questions for user input
 const information = [
-     {// Title of the repo
+     {// Title of the project
           type: 'input',
           name: 'title',
-          message: 'What is the title of your repository?',
-          // Confirmation that a title was entered
-          validate: nameInput => {
-               if (nameInput) {
-                    return true;
-               } else {
-                    console.log('Please enter the title of your repository.');
-                    return false;
-               }
-          }
+          message: 'What is the title of your project?',
      },
 
      {
@@ -26,28 +17,12 @@ const information = [
           name: 'license',
           message: 'Please select a license:',
           choices: ['mit', 'apache-2.0', 'agpl-3.0', 'mpl-2.0', 'bsl-1.0'],
-          validate: nameInput => {
-               if (nameInput) {
-                    return true;
-               } else {
-                    console.log('Please select a license.');
-                    return false;
-               }
-          }
      },
 
      {
           type: 'input',
           name: 'description',
           message: 'What is the purpose of your project and how would you describe it?',
-          validate: nameInput => {
-               if (nameInput) {
-                    return true;
-               } else {
-                    console.log('Please describe your project.');
-                    return false;
-               }
-          }
      },
 
      {
@@ -60,14 +35,6 @@ const information = [
           type: 'input',
           name: 'installation',
           message: 'What are the steps for installation?',
-          validate: nameInput => {
-               if (nameInput) {
-                    return true;
-               } else {
-                    console.log('Please describe the steps for installation.');
-                    return false;
-               }
-          },
           when: ({ confirmInstallation }) => confirmInstallation,
      },
 
@@ -81,14 +48,6 @@ const information = [
           type: 'input',
           name: 'usage',
           message: 'Describe how to use the application.',
-          validate: nameInput => {
-               if (nameInput) {
-                    return true;
-               } else {
-                    console.log('Please describe how to use the application.');
-                    return false;
-               }
-          },
           when: ({ confirmUsage }) => confirmUsage,
      },
 
@@ -101,19 +60,11 @@ const information = [
      {
           type: 'input',
           name: 'media',
-          message: 'Insert your local media url (eg., ./develop/graphics/name.gif',
-          validate: (input) => {
-               if (input) {
-                    return true;
-               } else {
-                    console.log('Please enter at least one media url.');
-                    return false;
-               }
-          },
+          message: 'Insert your local media url (eg., ./develop/graphics/testing.gif)',
           when: ({ confirmMedia }) => confirmMedia,
-          filter: (input) => {
-               return input.split(',').map((url) => url.trim());
-          },
+          //filter: (input) => {
+          //return input.split(',').map((url) => url.trim());
+          //},
      },
 
      {
@@ -126,14 +77,6 @@ const information = [
           type: 'input',
           name: 'testing',
           message: 'Explain how other developers can test your project.',
-          validate: (input) => {
-               if (input) {
-                    return true;
-               } else {
-                    console.log('Please explain how other developers can test your project.');
-                    return false;
-               }
-          },
           when: ({ confirmTesting }) => confirmTesting,
      },
 
@@ -147,14 +90,6 @@ const information = [
           type: 'input',
           name: 'contribution',
           message: 'Provide information (who & how) others have contributed to your project.',
-          validate: (input) => {
-               if (input) {
-                    return true;
-               } else {
-                    console.log('Please provide information (who & how) others have contributed to your project.');
-                    return false;
-               }
-          },
           when: ({ confirmContribution }) => confirmContribution,
      },
 
