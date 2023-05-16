@@ -21,7 +21,7 @@ As a developer I want an efficient README generator where I can quickly create a
  * [Media](#media)
  * [Testing](#testing)
  * [Contribution](#contribution)
- * [Question](#username)
+ 
 
 &nbsp;
 
@@ -29,9 +29,9 @@ As a developer I want an efficient README generator where I can quickly create a
 
 Step 1: Install node.js. Step 2: Install npm. Step 3: Install the modules fs, inquirer and util. Go to your terminal and type in npm install + module name. You are now ready to use the application.
 
-[Node.js Installation](https://nodejs.org/en)
+* [Node.js Installation](https://nodejs.org/en)
 
-[NPM Installation](https://docs.npmjs.com/cli/v8/commands/npm-install)
+* [NPM Installation](https://docs.npmjs.com/cli/v8/commands/npm-install)
 
 &nbsp;
 
@@ -55,7 +55,7 @@ _A brief overview of the project build_
 
 ## Media
 
-![Media](./develop/graphics/testing.gif)
+![Media](./develop/graphics/screenshot.png)
 
 * Visit [Full Media](https://drive.google.com/file/d/11rmrzXOINSVQvJi2bLvetUP0_cHiLzjO/view) to see more details
 
@@ -67,7 +67,7 @@ _A brief overview of the project build_
 
 ## Testing
 
-The best way for now would be to contact me to make arrangements
+
 
 &nbsp;
 
