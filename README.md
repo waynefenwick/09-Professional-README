@@ -55,7 +55,7 @@ _A brief overview of the project build_
 
 ## Media
 
-![Media](./develop/graphics/screenshot.png)
+![Media](./graphics/screenshot.png)
 
 * Visit [Full Media](https://drive.google.com/file/d/11rmrzXOINSVQvJi2bLvetUP0_cHiLzjO/view) to see more details
 
@@ -67,7 +67,7 @@ _A brief overview of the project build_
 
 ## Testing
 
-
+Developers are currently doing research on how this project can be improved.
 
 &nbsp;
 
