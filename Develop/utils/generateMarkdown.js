@@ -76,9 +76,9 @@ ${data.description}
 
 ${data.installation || ''}
 
-[Node.js Installation](https://nodejs.org/en)
+* [Node.js Installation](https://nodejs.org/en)
 
-[NPM Installation](https://docs.npmjs.com/cli/v8/commands/npm-install)
+* [NPM Installation](https://docs.npmjs.com/cli/v8/commands/npm-install)
 
 &nbsp;
 
