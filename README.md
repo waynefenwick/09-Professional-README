@@ -1,9 +1,9 @@
 
 
-# A Professional README.md Template
+# SVG-LOGO-MAKER
 
 ## License
-[![License Badge](https://img.shields.io/badge/license-mpl2.0-green?style=plastic)](https://choosealicense.com/licenses/mpl-2.0/)&nbsp;
+[![License Badge](https://img.shields.io/badge/license-mit-green?style=plastic)](https://choosealicense.com/licenses/mit/)&nbsp;
 
 * Select the badge to see details.
 * To see more about license badges, visit [Shields IO](https://shields.io/category/license)
@@ -11,7 +11,7 @@
 &nbsp;
 
 ## Description
-As a developer I wanted an efficient README generator where I could quickly create a professional README file for a new project. The generator is node.js based. It enables me to very quickly produce a top quality README file that I can add to any of my projects.
+The purpose is to build a Node.js command-line application that takes in user input to generate a logo and save it as an SVG file. The application prompts the user to select a color and shape, provide text for the logo, and save the generated SVG to a .svg file.
 
 &nbsp;
 
@@ -42,7 +42,7 @@ Step 1: Install node.js. Step 2: Install npm. Step 3: Install the modules fs, in
 
 ## Usage
 
-Step 1: Clone this repo to your machine. Step 2: Open up your terminal. Step 3: Change to the relevant directory containing this repo. Step 4: Type in node index.js. Answer the node prompts. Once complete, the README.md file will be produced. Click on the file then right click and select the option Open Preview. This will let you see what the end product is going to look like.
+
 
 &nbsp;
 
@@ -56,7 +56,7 @@ _A brief overview of the project build_
 
 ## Media
 
-![Media](./graphics/videosnippet.gif)
+![Media](./develop/graphics/videosnippet.gif)
 
 * Visit [Full Media](https://drive.google.com/file/d/1RP5O_m4o5pA8fouVVtnfsFCCwfmUrG7Y/view) to see more details
 
@@ -68,7 +68,7 @@ _A brief overview of the project build_
 
 ## Testing
 
-Developers are currently doing research on how this project can be improved.
+Go to ./svg-logo-maker/library/tests. Developers can run npx jest <circle, square, and triangle>.test.js to run tests that have been currently setup.
 
 &nbsp;
 
@@ -78,7 +78,7 @@ Developers are currently doing research on how this project can be improved.
 
 ## Contribution
 
-Below are links to resources I have used to help build this project. If you have any thoughts or would like to contribute, please let me know by email.
+
 
 * [Original Source code](https://github.com/coding-boot-camp/potential-enigma)
 * [Guideline to Professional README](https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide)

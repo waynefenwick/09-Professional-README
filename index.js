@@ -6,7 +6,7 @@ const util = require('util');
 
 // TODO: Create an array of questions for user input
 const information = [
-     {// Title of the project
+     {
           type: 'input',
           name: 'title',
           message: 'What is the title of your project?',
@@ -62,9 +62,6 @@ const information = [
           name: 'media',
           message: 'Insert your local media url (eg., ./develop/graphics/testing.gif)',
           when: ({ confirmMedia }) => confirmMedia,
-          //filter: (input) => {
-          //return input.split(',').map((url) => url.trim());
-          //},
      },
 
      {
@@ -121,7 +118,6 @@ const information = [
           }
      },
 ];
-
 
 // TODO: Create a function to write README file
 // REMEMBER: fs is a Node standard library package for reading and writing files
